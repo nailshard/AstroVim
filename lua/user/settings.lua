@@ -5,10 +5,13 @@ local set = vim.opt
 local config = {
 
   -- Set colorscheme
-  colorscheme = "onedark",
+  colorscheme = "vice",
+  -- colorscheme = "onedark",
 
   -- Add plugins
   plugins = {
+    {'AndrewRadev/switch.vim'},
+    {'gerazov/vim-toggle-bool'},
     -- { "andweeb/presence.nvim" },
     -- {
       -- "ray-x/lsp_signature.nvim",
@@ -46,6 +49,7 @@ set.relativenumber = true
 
 -- Set key bindings
 map("n", "<C-s>", ":w!<CR>", opts)
+map("n", "<leader>~", ":ToggleBool<CR>", opts)
 
 -- Set autocommands
 vim.cmd [[
