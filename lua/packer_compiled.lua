@@ -236,6 +236,12 @@ _G.packer_plugins = {
     path = "/home/tom/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-lastplace"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/opt/nvim-lastplace",
+    url = "https://github.com/ethanholz/nvim-lastplace"
+  },
   ["nvim-lsp-installer"] = {
     commands = { "LspInstall", "LspInstallInfo", "LspPrintInstalled", "LspRestart", "LspStart", "LspStop", "LspUninstall", "LspUninstallAll" },
     loaded = false,
@@ -378,6 +384,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: nvim-lastplace
+time([[Setup for nvim-lastplace]], true)
+try_loadstring("\27LJ\1\2@\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\vconfig\22configs.lastplace\frequire\0", "setup", "nvim-lastplace")
+time([[Setup for nvim-lastplace]], false)
+time([[packadd for nvim-lastplace]], true)
+vim.cmd [[packadd nvim-lastplace]]
+time([[packadd for nvim-lastplace]], false)
 -- Setup for: symbols-outline.nvim
 time([[Setup for symbols-outline.nvim]], true)
 try_loadstring("\27LJ\1\2E\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\28configs.symbols-outline\frequire\0", "setup", "symbols-outline.nvim")
